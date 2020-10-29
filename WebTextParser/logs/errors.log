@@ -1,0 +1,8 @@
+2020-10-30 02:20:05.704 [main] ERROR Main - java.lang.IllegalArgumentException: неверная ссылка на сайт!
+пример: https://ru.wikipedia.org/wiki/Java
+2020-10-30 02:20:27.971 [main] ERROR Main - java.lang.IllegalArgumentException: неверная ссылка на сайт!
+пример: https://ru.wikipedia.org/wiki/Java
+2020-10-30 02:43:26.437 [main] ERROR Main - java.lang.IllegalArgumentException: неверная ссылка на сайт!
+пример: https://ru.wikipedia.org/wiki/Java
+2020-10-30 02:43:46.757 [main] ERROR Main - java.lang.IllegalArgumentException: неверная ссылка на сайт!
+пример: https://ru.wikipedia.org/wiki/Java
