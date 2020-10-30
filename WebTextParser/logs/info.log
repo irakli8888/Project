@@ -1,12 +1,4 @@
-2020-10-30 02:20:37.263 [main] INFO  Main - Пользователь ввел ссылку https://ru.wikipedia.org/wiki/Java  
-2020-10-30 02:20:38.763 [main] INFO  Main - файл записан по пути data/page.html 
-2020-10-30 02:20:48.443 [main] INFO  Main - в базу данных были записаны значения 
-2020-10-30 02:43:01.253 [main] INFO  Main - Пользователь ввел ссылку https://ru.wikipedia.org/wiki/Java  
-2020-10-30 02:43:05.664 [main] INFO  Main - файл записан по пути data/page.html 
-2020-10-30 02:43:15.389 [main] INFO  Main - текст обработан и значения внесены в базу данных
-2020-10-30 02:57:22.269 [main] INFO  Main - Пользователь ввел ссылку https://ru.wikipedia.org/wiki/Java  
-2020-10-30 02:57:24.394 [main] INFO  Main - файл записан по пути data/page.html 
-2020-10-30 02:57:33.288 [main] INFO  Main - текст обработан и значения внесены в базу данных
-2020-10-30 03:00:02.637 [main] INFO  Main - Пользователь ввел ссылку https://ru.wikipedia.org/wiki/Java  
-2020-10-30 03:00:04.046 [main] INFO  Main - файл записан по пути data/page.html 
-2020-10-30 03:00:13.121 [main] INFO  Main - текст обработан и значения внесены в базу данных
+
+2020-10-30 04:32:55.369 [main] INFO  Main - Пользователь ввел ссылку https://ru.wikipedia.org/wiki/Java  
+2020-10-30 04:32:56.924 [main] INFO  Main - файл записан по пути data/page.html 
+2020-10-30 04:33:06.396 [main] INFO  Main - текст обработан и значения внесены в базу данных

@@ -27,21 +27,27 @@ public class Main {
     private static Parser parser = new Parser();
     private static final Pattern LINK =Pattern.compile("http[s]?://.*");//регулярное выражения для самых популярных протоколов соединения
 
-    private static final String USER="вашАккаунт"; //указываем, исходя из параметров сервера(аккаунт)
-    private static final String PASS="вашПароль";//указываем, исходя из параметров сервера(пароль)
-    private static final String DB_PATH="jdbc:mysql://localhost:вашХост/mymodel?useSSL=false&serverTimezone=UTC";//указываем исходя из параметров сервера(хост)
+    private static  String user;//="root"; //указываем, исходя из параметров сервера(аккаунт)
+    private static  String pass;//="nino1973";//указываем, исходя из параметров сервера(пароль)
+    private static  String db_path;//="jdbc:mysql://localhost:3306/mymodel?useSSL=false&serverTimezone=UTC";//указываем исходя из параметров сервера(хост)
 
     private static final long FREE_MEMORY_MB= Runtime.getRuntime().freeMemory()/1048576;
     ;
     public static void main(String[] args) throws SQLException {
-        System.out.println(FREE_MEMORY_MB);
-        Connection connection = DriverManager.getConnection(DB_PATH,USER,PASS);//подключаемся к базе данных
+        try {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("введите имя пользователя MySql");
+        user=sc.nextLine().trim();
+        System.out.println("введите пароль");
+        pass=sc.nextLine().trim();
+        System.out.println("введите порт");
+        String port=sc.nextLine().trim();
+        db_path="jdbc:mysql://localhost:"+port+"/mymodel?useSSL=false&serverTimezone=UTC";
+        Connection connection = DriverManager.getConnection(db_path,user,pass);//подключаемся к базе данных
         Statement statement=connection.createStatement();
         statement.executeUpdate("delete from word");//и удаляем предыдущие записи
         connection.close();
         statement.close();
-        try {
-            Scanner sc = new Scanner(System.in);
             System.out.println("Введите адрес сайта: ");
             String url = sc.nextLine();
             Matcher m = LINK.matcher(url);
@@ -71,7 +77,7 @@ public class Main {
     }
 
     public static Map<String, Long> wordCount(Document doc) throws SQLException {
-        Connection connection = DriverManager.getConnection(DB_PATH, USER, PASS);//соединяемся с базой данных
+        Connection connection = DriverManager.getConnection(db_path, user, pass);//соединяемся с базой данных
         Statement statement = connection.createStatement();
         String wordsArray[] = doc.text().split("[\\.\\!\\?\"\\,;:\\s\\n\\r\\t\\\\\\)\\(»«—/]");//разделяем текст по ключевым символам
         for (int i = 0; i < wordsArray.length; i++) {
