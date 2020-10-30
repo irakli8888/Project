@@ -16,11 +16,7 @@ web-страницу, сохранить ее на жесткий диск. За
   1.2 открыть консоль cmd и пройти до исполняемоего файла( команда cd) mysql(обычно, его расположение по умолчанию: C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql")
    и выполнить команду mysqldump -u USER -pPASSWORD DATABASE > dumpname.sql(пароль не отделять от символа -p), если дамп не получился, то открыть MySQl Workbench 
    (File->open sql script->newScript.sql) и выполнить его нажав на значок с молнией. Скрипт не содержит значений, в нем переданна только структура для объекта
-  1.3 перейти по пути WebTextParser/src/main/java/Main.java и изменить значения переменных
-    private static final String USER="вашАккаунт"; //указываем, исходя из параметров сервера(аккаунт)
-    private static final String PASS="вашПароль";//указываем, исходя из параметров сервера(пароль)
-    private static final String DB_PATH="jdbc:mysql://localhost:вашХост/mymodel?useSSL=false&serverTimezone=UTC";//указываем исходя из параметров сервера(хост)
-    
+   
  2. программу можно запустить через main метод, открыв ее в любом из компиляторов, либо через .jar файл(путь WebTextParser/out/artifacts/WebTextParser.jar; при таком запуске 
  в консоль не выводятся данные, но в бд записываются)
  
