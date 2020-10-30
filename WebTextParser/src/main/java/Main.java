@@ -55,7 +55,7 @@ public class Main {
                 throw new IllegalArgumentException("неверная ссылка на сайт!"//если ссылка на сайт введена неправильно
                         + "\nпример: https://ru.wikipedia.org/wiki/Java");// то генерируем исключение и заканчиваем работу
             }
-            LOGGER.info(INPUT_HISTORY_MARKER,"Пользователь ввел ссылку {}  ", url);//отправляем в лог саму сылку
+            LOGGER.info(INPUT_HISTORY_MARKER,"Пользователь ввел ссылку {}  ", url);//отправляем в лог саму cсылку
             readAndSavePage(url);//считываем и сохраняем html файл
             Document doc = Jsoup.parse(parser.parseFile(PATH_NAME));
             wordCount(doc);//считаем уникальные слова и записываем в бд
