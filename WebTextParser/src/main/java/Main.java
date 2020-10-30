@@ -27,9 +27,9 @@ public class Main {
     private static Parser parser = new Parser();
     private static final Pattern LINK =Pattern.compile("http[s]?://.*");//регулярное выражения для самых популярных протоколов соединения
 
-    private static  String user;//="root"; //указываем, исходя из параметров сервера(аккаунт)
-    private static  String pass;//="nino1973";//указываем, исходя из параметров сервера(пароль)
-    private static  String db_path;//="jdbc:mysql://localhost:3306/mymodel?useSSL=false&serverTimezone=UTC";//указываем исходя из параметров сервера(хост)
+    private static  String user;
+    private static  String pass;
+    private static  String db_path;
 
     private static final long FREE_MEMORY_MB= Runtime.getRuntime().freeMemory()/1048576;
     ;
